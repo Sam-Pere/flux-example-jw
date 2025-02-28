@@ -7,6 +7,7 @@ brew install fluxcd/tap/flux
 flux check --pre 
 
 export GITHUB_TOKEN=
+
 export GITHUB_USER=
  
  flux bootstrap github \           
@@ -15,3 +16,7 @@ export GITHUB_USER=
   --branch=main \
   --path=deployinfra \
   --personal
+
+  kind get clusters
+  kind delete cluster fluxcd
+  
