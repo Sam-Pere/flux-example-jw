@@ -1,3 +1,11 @@
+brew install kind
+kind create cluster --name fluxcd
+kind get clusters
+
+brew install derailed/k9s/k9s
+brew install fluxcd/tap/flux
+flux check --pre 
+
 export GITHUB_TOKEN=
 export GITHUB_USER=
  
